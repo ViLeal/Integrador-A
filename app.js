@@ -29,8 +29,19 @@ function getCountryNameByIso3(isoCode){
  * @returns {Object}
  */
 function getCountrySummary(isoCode){
-    //complete with your code
+    const informationCountry = countries.find(country => country.iso3 === isoCode)
+    const object = {
+        name: informationCountry.name,
+        iso3: informationCountry.iso3,
+        iso2: informationCountry.iso2,
+        phone_code: informationCountry.phone_code,
+        capital: informationCountry.capital,
+        currency: informationCountry.currency ,
+        tld: informationCountry.tld ,
+        region: informationCountry.region ,
+        emoji: informationCountry.emoji ,
 }
+return object};
 
 function main() {
     console.log(
